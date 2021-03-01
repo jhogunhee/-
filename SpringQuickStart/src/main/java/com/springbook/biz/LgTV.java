@@ -6,20 +6,24 @@ package com.springbook.biz;
   * @Date : 2021. 3. 1 
   * @작성자 : rjsgm
   * @변경이력 :
-  * @프로그램 설명 : LGTV 클래스에도 SamsungTV클래스와 같은 기능을 수행하는 메소드가 있지만,
-  * SamsungTV의 메소드 이름과 다르다.
+  * @프로그램 설명 : LgTV 클래스는 TV인터페이스에 선언된 추상메소드들을 재정의 하여야한다. 
   */
-public class LgTV {
-	public void turnOn() {
+public class LgTV implements TV{
+
+	@Override
+	public void powerOn() {
 		System.out.println("LgTV --- 전원 켠다.");
 	}
-	public void turnOff() {
+	@Override
+	public void powerOff() {
 		System.out.println("LgTV --- 전원 끈다.");
 	}
-	public void soungUp() {
+	@Override
+	public void volumeUp() {
 		System.out.println("LgTV --- 소리 올린다.");
 	}
-	public void soungDown() {
+	@Override
+	public void volumeDown() {
 		System.out.println("LgTV --- 소리 내린다.");
 	}
 }
