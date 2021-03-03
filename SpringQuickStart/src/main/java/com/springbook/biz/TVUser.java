@@ -11,6 +11,7 @@ public class TVUser {
 		TV tv = (TV) factory.getBean("tv");
 		TV tv2 = (TV) factory.getBean("tv");
 		
+		tv.volumeUp();
 //		tv.powerOff();
 //		tv.volumeUp();
 //		tv.volumeDown();
